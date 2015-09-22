@@ -6,17 +6,17 @@ class SumOfOddNumbers
 	def odd_numbers(rows)
 		current_number = 1
 		stored_numbers = [1]
-		individual_numbers = 1
+		individual_numbers = 0
 
-		puts "In a #{rows} row pyrmaid,"
-		puts "There should be #{individual_numbers} number(s) total in the pyramid."	
-
-
+		puts "A #{rows} row pyramid."
 		
+
 		rows.times do 
 			individual_numbers += rows
+			puts individual_numbers
 			rows -= 1
 		end
+		puts "There should be #{individual_numbers} number(s) total in the pyramid."	
 
 		individual_numbers.times do 
 			current_number += 2
