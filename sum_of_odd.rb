@@ -19,10 +19,10 @@ class SumOfOddNumbers
 	end
 
 	def row_sum_odd_numbers(rows_to_sum)
-		odd_numbers(rows_to_sum)
+		odd_numbers(rows_to_sum - 1)
 	end
 
 end
 
 a = SumOfOddNumbers.new
-a.row_sum_odd_numbers(2)
+a.row_sum_odd_numbers(4)
