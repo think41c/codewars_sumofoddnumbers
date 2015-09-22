@@ -6,11 +6,23 @@ class SumOfOddNumbers
 	def odd_numbers(rows)
 		current_number = 1
 		stored_numbers = [1]
+		individual_numbers = 1
 
+		puts "In a #{rows} row pyrmaid,"
+		puts "There should be #{individual_numbers} number(s) total in the pyramid."	
+
+
+		
 		rows.times do 
+			individual_numbers += rows
+			rows -= 1
+		end
+
+		individual_numbers.times do 
 			current_number += 2
 			stored_numbers << current_number
 		end
+		puts "The stored numbers are #{stored_numbers}"
 		add_row(stored_numbers)
 	end
 
@@ -23,13 +35,13 @@ class SumOfOddNumbers
 	end
 
 	def row_sum_odd_numbers(rows_to_sum)
-		odd_numbers(rows_to_sum - 1)
+		odd_numbers(rows_to_sum)
 	end
 
 end
 
 a = SumOfOddNumbers.new
-a.row_sum_odd_numbers(4)
+a.row_sum_odd_numbers(1)
 #  Row sample 
 #       1          = 1
 #      3 5         = 8 
