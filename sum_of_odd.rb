@@ -11,7 +11,13 @@ class SumOfOddNumbers
 			current_number += 2
 			stored_numbers << current_number
 		end
-		p stored_numbers
+		add_row(stored_numbers)
+	end
+
+	def add_row(stored_numbers)
+		stored_numbers.each do |x|
+			puts x
+		end
 	end
 
 	def row_sum_odd_numbers(rows_to_sum)
