@@ -4,10 +4,6 @@ class SumOfOddNumbers
 	end
 
 	def odd_numbers(rows)
-		# Rows is always the same number of odd numbers you'll get
-		# If rows is 3 then loop through 3 times starting with one, 
-		# and adding 2 to the number. Result -> 1, 3, 5
-		# Take result and store as an array
 		current_number = 1
 		stored_numbers = [1]
 
