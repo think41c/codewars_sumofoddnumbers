@@ -22,10 +22,15 @@ class SumOfOddNumbers
 
 		# So we know we need 6 numbers to fill a 3 row pyramid. And individual_numbers holds that 6 we just calculated.
 		# Now we need to calculate each of those 6 numbers in the pyramid, so we have 6 odd numbers total.
-		individual_numbers.times do          # We need 6 odd numbers, so we calculate 6 numbers.
+		
+		# We need 6 odd numbers, but we already gave it the first odd number (1), so we need to only derive 5 additional numbers:
+		individual_numbers -= 1
+		
+		individual_numbers.times do          # We need 6 odd numbers, so we calculate the remaining 5 numbers.
 			current_number += 2              # Starting with 1 always, we just add 2 to get an odd number.
 			stored_numbers << current_number # Once we have that odd number, we stuff it into our array with numbers of the pyramid.
 		end
+
 		puts "The stored numbers are #{stored_numbers}"
 		add_row(stored_numbers)
 	end
