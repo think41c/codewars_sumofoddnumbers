@@ -4,14 +4,13 @@ class SumOfOddNumbers
 	end
 
 	def odd_numbers(rows)
-		current_number = 1
-		stored_numbers = [1]
-		individual_numbers = 0
+		current_number = 1          # Always start with 1, as it's the top of every pyramid. 
+		stored_numbers = [1]        # The array that holds all the numbers in the pyramid. It always starts with 1. 
+		individual_numbers = 0      # It's 0 b/c we need this to have 
 
-		puts "A #{rows} row pyramid."
-		
+		puts "A #{rows} row pyramid."  # This comes directly from the user input in how many rows to create.
 
-		rows.times do 
+		rows.times do                  # The rows is what's been inputted by the user. If it's "2", then we'll do this block 2 times.
 			individual_numbers += rows
 			puts individual_numbers
 			rows -= 1
@@ -41,7 +40,7 @@ class SumOfOddNumbers
 end
 
 a = SumOfOddNumbers.new
-a.row_sum_odd_numbers(1)
+a.row_sum_odd_numbers(2)
 #  Row sample 
 #       1          = 1
 #      3 5         = 8 
