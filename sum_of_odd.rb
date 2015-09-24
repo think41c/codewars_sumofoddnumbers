@@ -10,8 +10,12 @@ class SumOfOddNumbers
 
 		puts "A #{rows} row pyramid."  # This comes directly from the user input in how many rows to create.
 
-		rows.times do                  # The rows is what's been inputted by the user. If it's "2", then we'll do this block 2 times.
-			individual_numbers += rows
+		# We need a way to establish how many numbers there should be in a pyramid, based on its rows, so we know how many 
+		# odd numbers to calcualte. The logic would be: 3 rows is equal to = 1 + 2 + 3...6 individual numbers in a 3 row pyramid.
+		# This block does that:
+
+		rows.times do                   # The rows is what's been input by the user. If it's "2", then we'll do this block 2 times.
+			individual_numbers += rows  
 			puts individual_numbers
 			rows -= 1
 		end
