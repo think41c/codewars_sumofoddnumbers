@@ -50,8 +50,10 @@ class SumOfOddNumbers
 
     for i in (index_to_count_from..stored_numbers.length)
       puts i
+      puts "\n"
+      p stored_numbers[i]
     end
-    
+
 
 	end
 
