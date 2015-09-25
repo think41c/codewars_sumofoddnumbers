@@ -42,9 +42,10 @@ class SumOfOddNumbers
 	  # The 4th row is index 7, 8, 9, 10
 	  # The 5th row is index 11, 12, 13, 14, 15
 	  # Essentially for the 5th row, all the prior numbers for each row are 4+3+2+1 = 10. Therefore, row 5 starts at 10+1 = 11. 
-	  
+    # Also the 5th row indexes are ->  Stored_numbers - The Rows of the pyramid	+ 1. 
+    #                                         6       -             5           + 1 
 	end
-	
+
   def sum_all_numbers_in_pyramid
     final_sum = 0
     stored_numbers.each do |x|
@@ -60,7 +61,7 @@ class SumOfOddNumbers
 end
 
 a = SumOfOddNumbers.new
-a.row_sum_odd_numbers(3)
+a.row_sum_odd_numbers(5)
 #  Row sample 
 #       1          = 1
 #      3 5         = 8 
