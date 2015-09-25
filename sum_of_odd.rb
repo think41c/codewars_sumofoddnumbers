@@ -36,12 +36,22 @@ class SumOfOddNumbers
 	end
 
 	def add_row(stored_numbers)
-	  final_sum = 0
-		stored_numbers.each do |x|
-			final_sum += x
-		end
-		puts final_sum
+	  # The rows of a pyramid are the following numbers in their order. Meaning the first row is always the first number listed. 
+	  # The second row is always the 2nd and 3rd number listed. 
+	  # The third row is position, 4, 5, 6.
+	  # The 4th row is index 7, 8, 9, 10
+	  # The 5th row is index 11, 12, 13, 14, 15
+	  # Essentially for the 5th row, all the prior numbers for each row are 4+3+2+1 = 10. Therefore, row 5 starts at 10+1 = 11. 
+	  
 	end
+	
+  def sum_all_numbers_in_pyramid
+    final_sum = 0
+    stored_numbers.each do |x|
+	  final_sum += x
+    end
+  puts final_sum
+  end
 
 	def row_sum_odd_numbers(rows_to_sum)
 		odd_numbers(rows_to_sum)
