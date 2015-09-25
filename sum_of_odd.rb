@@ -4,6 +4,7 @@ class SumOfOddNumbers
 	end
 
 	def odd_numbers(rows)
+    @rows = rows                # Needed for other methods to see the amount of rows a user input. 
 		current_number = 1          # Always start with 1, as it's the top of every pyramid. We use this to stuff into the stored array.
 		stored_numbers = [1]        # The array that holds all the numbers in the pyramid. It always starts with 1. 
 		individual_numbers = 0      # It's 0 b/c we need this to have 
@@ -43,7 +44,15 @@ class SumOfOddNumbers
 	  # The 5th row is index 11, 12, 13, 14, 15
 	  # Essentially for the 5th row, all the prior numbers for each row are 4+3+2+1 = 10. Therefore, row 5 starts at 10+1 = 11. 
     # Also the 5th row indexes are ->  Stored_numbers - The Rows of the pyramid	+ 1. 
-    #                                         6       -             5           + 1 
+    # ie.                                      15       -             5         + 1 =  11
+    # 
+    index_to_count_from = stored_numbers.length-@rows+1 
+
+    for i in (index_to_count_from..stored_numbers.length)
+      puts i
+    end
+    
+
 	end
 
   def sum_all_numbers_in_pyramid
