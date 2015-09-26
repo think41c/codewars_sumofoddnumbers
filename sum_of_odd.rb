@@ -46,9 +46,9 @@ class SumOfOddNumbers
     # Also the 5th row indexes are ->  Stored_numbers - The Rows of the pyramid	+ 1. 
     # ie.                                      15       -             5         + 1 =  11
     # 
-    index_to_count_from = stored_numbers.length-@rows+1 
+    index_to_count_from = stored_numbers.length-@rows+1    # The length will be one more than the amount of array which starts at 0.
 
-    for i in (index_to_count_from..stored_numbers.length)
+    for i in (index_to_count_from-1..stored_numbers.length)
       puts i
       puts "\n"
       p stored_numbers[i]
@@ -72,7 +72,7 @@ class SumOfOddNumbers
 end
 
 a = SumOfOddNumbers.new
-a.row_sum_odd_numbers(5)
+a.row_sum_odd_numbers(3)
 #  Row sample 
 #       1          = 1
 #      3 5         = 8 
