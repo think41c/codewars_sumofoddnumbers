@@ -57,9 +57,12 @@ class SumOfOddNumbers
       result_row << stored_numbers[i]
       puts "\n"
     end
-
-
+    sum_all_numbers_in_row(result_row)
 	end
+
+  def sum_all_numbers_in_row(x)
+    puts "The numbers we want to add together are #{x}"
+  end
 
   def sum_all_numbers_in_pyramid
     final_sum = 0
