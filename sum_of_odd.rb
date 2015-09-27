@@ -60,8 +60,9 @@ class SumOfOddNumbers
     sum_all_numbers_in_row(result_row)
 	end
 
-  def sum_all_numbers_in_row(x)
-    puts "The numbers we want to add together are #{x}"
+  def sum_all_numbers_in_row(row_to_add)
+    puts "The numbers we want to add together are #{row_to_add}"
+    puts row_to_add.inject(:+)
   end
 
   def sum_all_numbers_in_pyramid
@@ -79,7 +80,7 @@ class SumOfOddNumbers
 end
 
 a = SumOfOddNumbers.new
-a.row_sum_odd_numbers(3)
+a.row_sum_odd_numbers(4)
 #  Row sample 
 #       1          = 1
 #      3 5         = 8 
