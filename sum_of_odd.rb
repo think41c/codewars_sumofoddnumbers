@@ -46,6 +46,7 @@ class SumOfOddNumbers
     # Also the 5th row indexes are ->  Stored_numbers - The Rows of the pyramid	+ 1. 
     # ie.                                      15       -             5         + 1 =  11
     # 
+    result_row = []   # This is the new array that will contain the numbers we want to add together.
     index_to_count_from = stored_numbers.length-@rows+1    # The length will be one more than the amount of array which starts at 0.
     puts "The index_to_count_from is #{index_to_count_from}"
     puts "The stored number length is #{stored_numbers.length}"
@@ -53,6 +54,7 @@ class SumOfOddNumbers
       puts "\n"
       puts "#{i} is the current index"
       p stored_numbers[i]
+      result_row << stored_numbers[i]
       puts "\n"
     end
 
