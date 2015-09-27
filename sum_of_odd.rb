@@ -47,11 +47,13 @@ class SumOfOddNumbers
     # ie.                                      15       -             5         + 1 =  11
     # 
     index_to_count_from = stored_numbers.length-@rows+1    # The length will be one more than the amount of array which starts at 0.
-
-    for i in (index_to_count_from-1..stored_numbers.length)
-      puts i
+    puts "The index_to_count_from is #{index_to_count_from}"
+    puts "The stored number length is #{stored_numbers.length}"
+    for i in (index_to_count_from-1..stored_numbers.length-1)
       puts "\n"
+      puts "#{i} is the current index"
       p stored_numbers[i]
+      puts "\n"
     end
 
 
